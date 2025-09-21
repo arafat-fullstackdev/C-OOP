@@ -1,31 +1,18 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
 
-int main (){
-    cout<<"Hello CPP"<<endl;
-    //double base = 5.0;
-    double exponent = 3.0;
-    double result = pow(base, exponent); // Calculates 5 raised to the power of 3
-
-    scout << Result:<<endl;
-    //Donation Drive
-    #include <bits/stdc++.h>
 using namespace std;
+#include <queue>
 
 int main() {
-	// your code goes here
-int n,x,t;
+queue<int>q;    
+q.push(1);
+q.push(11);
+q.push(111);
+q.push(1111);
 
-cin>>t;
-
-while(t--){
-    cin>>n>>x;
-    cout<<n-x<<endl;
-    
-}
-return 0;
-}
+cout<<q.size()<<endl;
+cout<<q.front()<<endl;
+cout<<q.back()<<endl;
 
     return 0;
-
 }
