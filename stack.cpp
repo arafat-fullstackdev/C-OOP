@@ -37,8 +37,28 @@ int pop(){
 
     return -1;
   }
+  return arr[top--];
 };
+//? Peek value
+int peek(){
+  if(top == -1){
+    cout<<"Stack is Empty"<<endl;
+    return -1;
+    }
+    return arr[top];
 };
+
+// Stack isEmpty?
+bool isEmpty(){
+  return top == -1;
+}
+
+bool isFull(){
+  return top == capacity -1;
+}
+
+};
+
 int main() {
 arrayStack st(5);
 
@@ -48,7 +68,10 @@ st.push(111);
 st.push(11111);   
 st.push(100000); 
 
-cout<<"Poped value"<<st.pop()<<endl;
+cout<<"Popped value "<<st.pop()<<endl;
+cout<<"Peek value: "<<st.peek()<<endl;
+cout<<"isEmpty value: "<<(st.isEmpty()? "Yes": "No")<<endl;
+cout<<"isFull value: "<<(st.isFull()? "Yes" : "No")<<endl;
 
     return 0;
 }
