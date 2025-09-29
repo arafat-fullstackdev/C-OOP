@@ -94,6 +94,22 @@ class myStack{
     count ++;
   };
 
+  //pop
+  int pop(){
+    if(top == NULL){
+      cout<<"Stack UnderFlow!"<<endl;
+      return -1;
+    }
+
+    Node *temp = top;
+    top = top-> next;
+    int val = temp-> data;
+
+    count --;
+    delete temp;
+    return val;
+  };
+
   // IS Full
   bool isFull(){
     return count == 5;
