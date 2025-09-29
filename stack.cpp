@@ -70,32 +70,50 @@ class Node{
         data = n;
         next = NULL;
       }
-}
+};
 
 class myStack{
   //pointer define
   Node *top;
 
+  //to store current size of stack
+  int count;
+
   public:
   myStack(){
     //initially stack is empty
     top = NULL;
+    count = 0;
   }
-}
+  //push
+  void push(int n){
+    Node *temp = new Node(n);
+    temp-> next = top;
+    top = temp;
+
+    count ++;
+  };
+
+  // IS Full
+  bool isFull(){
+    return count == 5;
+  };
+};
 
 int main() {
-// arrayStack st(5);
+//arrayStack st(5);
+myStack st;
 
-// st.push(1);   
-// st.push(11);   
-// st.push(111);   
-// st.push(11111);   
-// st.push(100000); 
+st.push(1);   
+st.push(11);   
+st.push(111);   
+st.push(11111);   
+st.push(100000); 
 
 // cout<<"Popped value "<<st.pop()<<endl;
 // cout<<"Peek value: "<<st.peek()<<endl;
 // cout<<"isEmpty value: "<<(st.isEmpty()? "Yes": "No")<<endl;
-// cout<<"isFull value: "<<(st.isFull()? "Yes" : "No")<<endl;
+ cout<<"isFull value: "<<(st.isFull()? "Yes" : "No")<<endl;
 
     return 0;
 }
