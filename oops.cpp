@@ -29,4 +29,6 @@ cout<<t1.name<<endl;
 Teacher t2;
 Teacher t3;
 
+return 0;
+
 }
