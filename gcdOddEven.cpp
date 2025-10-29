@@ -19,10 +19,27 @@ int gcdFun(int a, int b){
     return result;
 };
 
+// even
+int lcmFun(int a, int b){
+    //large value
+    int g = max(a,b);
+
+    //Smaller value
+    int s = min(a,b);
+
+    for(int i =g; i<= a *b;  i+=g){
+        if(i % s ==0) 
+        return i;
+    }
+
+  
+};
+
 int main() {
      int a,b;
      cin>>a>>b;
-    cout<<"GCD: "<<gcdFun(a,b)<<endl;
+    //cout<<"GCD: "<<gcdFun(a,b)<<endl;
+    cout<<"LCM "<<lcmFun(a,b)<<endl;
 
 
 
