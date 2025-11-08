@@ -19,32 +19,48 @@ int main1() {
 	// your code goes here
 	int t;
 	
+	// cin>>t;
+	
+	// for(int i =0;i<t; i++){
+	//     int x,y,z;
+	//     cin>>x>>y>>z;
+	//    // int total;
+	//    // total= x * y;
+	//    // int z = (z/total) * 100;
+	    
+	//     if(z> x*y/2) cout<<"Yes"<<endl;
+	//     else cout<<"No"<<endl;
+	    
+	// }
+	// 	for(int i =0;i<t; i++){
+	//     int x,y,z;
+	//     cin>>x>>y>>z;
+	//    // int total;
+	//    // total= x * y;
+	//    // int z = (z/total) * 100;
+	    
+	//     if(z> x*y/2) cout<<"Yes"<<endl;
+	//     else cout<<"No"<<endl;
+	    
+	// }
+
+//}
+  //? Rating 400
+  	int t;
 	cin>>t;
 	
-	for(int i =0;i<t; i++){
-	    int x,y,z;
-	    cin>>x>>y>>z;
-	   // int total;
-	   // total= x * y;
-	   // int z = (z/total) * 100;
-	    
-	    if(z> x*y/2) cout<<"Yes"<<endl;
-	    else cout<<"No"<<endl;
-	    
+	for(int i=0; i<t; i++){
+	    int x,y;
+	    cin>>x>>y;
+	    if(x<y){
+	        cout<<"First"<<endl;
+	    }else if(x>y){
+	        cout<<"Second"<<endl;
+	    }else{
+	        cout<<"Any"<<endl;
+	    }
+	 
+	   
 	}
-		for(int i =0;i<t; i++){
-	    int x,y,z;
-	    cin>>x>>y>>z;
-	   // int total;
-	   // total= x * y;
-	   // int z = (z/total) * 100;
-	    
-	    if(z> x*y/2) cout<<"Yes"<<endl;
-	    else cout<<"No"<<endl;
-	    
-	}
-
-}
-
 
 }
