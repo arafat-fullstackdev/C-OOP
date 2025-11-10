@@ -52,6 +52,17 @@ int main(){
     // Traversing vector using range based for loop
   	for (int i = 0; i < v.size(); i++)
         cout << v[i] << " ";
+
+        // Creating a vector of strings
+    vector<string> v;
+
+    // Insert strings in vector
+    v.push_back("Hi");
+    v.push_back("Geeks,");
+    v.push_back("Welcome!");
+
+    for(auto i : v)
+        cout << i << " ";
 return 0;
 
 };
