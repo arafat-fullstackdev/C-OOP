@@ -1,27 +1,34 @@
-// C++ program to traverse 
-// the array
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to traverse and 
-// print the array
-void printArray(int* arr, int n)
-{
-    int i;
+// Function for finding first and last occurrence of x
+vector<int> find(vector<int> arr, int x) {
+    int n = arr.size();
 
-    cout << "Array: ";
-    for (i = 0; i < n; i++) 
-    {
-        cout << arr[i] << "  ";
+    // Initialize first and last index
+    int first = -1, last = -1;
+
+    for (int i = 0; i < n; i++) {
+
+        // If x is different, continue
+        if (x != arr[i])
+            continue;
+        
+        // If first occurrence found
+        if (first == -1)
+            first = i;
+        
+        // Update last occurrence
+        last = i;
     }
+    vector<int> res = {first, last};
+    return res;
 }
 
-// Driver code
-int main()
-{
-    int arr[] = {2, -1, 5, 6, 0, -3};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    printArray(arr, n);
+int main() {
+    vector<int> arr = {1, 3, 5, 5, 5, 5, 67, 123, 125};
+    int x = 5;
+    vector<int> res = find(arr, x);
+    cout << res[0] << " " << res[1];
     return 0;
 }
