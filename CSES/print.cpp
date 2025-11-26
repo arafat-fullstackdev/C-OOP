@@ -11,8 +11,10 @@ int main()
     while (t--)
     {
         long long  n;
+        long long  n1;
 
         cin >> n;
+        cin >> n1;
 
         if (n % 2 == 0)
             cout << n / 2 << endl;
